@@ -3,3 +3,4 @@
 /docs/build/
 /registries
 Manifest.toml
+/.vscode
