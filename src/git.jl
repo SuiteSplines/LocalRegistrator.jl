@@ -38,7 +38,7 @@ end
     head_commit_hash(path::String)
 
 Returns commit hash of `HEAD` in repository located at `path`. The repository
-must exist and be a top-level repository, see [istoplevel](@ref)
+must exist and be a top-level repository, see [istoplevel](@ref).
 """
 function head_commit_hash(path::String)
     @assert istoplevel(path)
@@ -50,7 +50,7 @@ end
     tree_hash(path::String; commit::String = "HEAD")
 
 Returns tree hash of `commit` in repository located at `path`. The repository
-must exist and be a top-level repository, see [istoplevel](@ref)
+must exist and be a top-level repository, see [istoplevel](@ref).
 """
 function tree_hash(path::String; commit::S="HEAD") where {S<:AbstractString}
     @assert istoplevel(path)

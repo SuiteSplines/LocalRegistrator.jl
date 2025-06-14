@@ -7,7 +7,7 @@ Register lastest version of a package located at `project_url` (in best case a r
 register(; project_url="https://github.com/SuiteSplines/SuiteSplinesExamplePkg.jl.git", registry_url="https://github.com/SuiteSplines/SuiteSplinesRegistry.git")
 ```
 
-If your package depends on some other local repositories, include these in `registry_deps`. The General repository is included by default.
+If your package depends on some other local repositories include these in `registry_deps`. The General repository is included by default.
 """
 function register(; project_url::S, registry_url::S, registry_deps::Vector{S}=["https://github.com/JuliaRegistries/General.git"], dry_run::Bool=false) where {S<:AbstractString}
     # work in temporary directory
