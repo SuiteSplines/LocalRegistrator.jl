@@ -37,7 +37,7 @@ register(; project_url="https://github.com/SuiteSplines/SuiteSplinesExamplePkg.j
            registry_url="https://github.com/SuiteSplines/SuiteSplinesRegistry.git")
 ```
 
-3. At the end, you will see the included commit message and be prompted to confirm pushing the new branch to the remote registry.
+At the end, you will see the included commit message and be prompted to confirm pushing the new branch to the remote registry.
 
 
 ## Index
