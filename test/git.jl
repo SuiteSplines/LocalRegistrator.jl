@@ -1,4 +1,5 @@
 using Git
+using Random
 
 function withtempdir(f::Function)
     mktempdir() do tmp_dir
@@ -22,5 +23,8 @@ end
 
         # test discovery with trailing slash
         @test LocalRegistrator.istoplevel(joinpath(tmp_dir,"")) == true
+
+        # test discovery with not existing directory
+        @test LocalRegistrator.istoplevel(randstring(42)) == false
     end
 end

@@ -5,6 +5,7 @@ Returns `true` if a top-level repository is located at `path` and `false` otherw
 It does not throw an exception if the `git` process fails.
 """
 function istoplevel(path::String)
+    !isdir(path) && return false
     path = expanduser(realpath(path))
     buf = IOBuffer()
 
