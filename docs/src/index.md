@@ -33,7 +33,8 @@ Date:   Sat Jun 14 18:10:40 2025 +0200
 2. Use `LocalRegistrator` to register the package. You will need the remote URL of the package in question as well as the remote URL of the target registry.
 
 ```
-register(; project_url="https://github.com/SuiteSplines/SuiteSplinesExamplePkg.jl.git", registry_url="https://github.com/SuiteSplines/SuiteSplinesRegistry.git")
+register(; project_url="https://github.com/SuiteSplines/SuiteSplinesExamplePkg.jl.git",\
+           registry_url="https://github.com/SuiteSplines/SuiteSplinesRegistry.git")
 ```
 
 3. At the end, you will see the included commit message and be prompted to confirm pushing the new branch to the remote registry.
