@@ -1,8 +1,9 @@
 module LocalRegistrator
 
-    using Git
-    using RegistryTools
+    using Git, TOML, Random
+    import RegistryTools
 
+    include("base.jl")
     include("git.jl")
     include("registering.jl")
 

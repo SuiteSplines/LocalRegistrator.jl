@@ -1,16 +1,20 @@
 name = "LocalRegistrator"
 uuid = "b2e007fe-26bf-4abf-a2e9-4b2a1ab78b25"
 authors = ["Michał Mika <michal@mika.sh> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 Git = "d7ba0133-e1db-5d97-8f8c-041e4b3a1eb2"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 RegistryTools = "d1eb7eb1-105f-429d-abf5-b0f65cb9e2c4"
+TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 
 [compat]
 Git = "^1.4.0"
+Pkg = "^1.10.0"
 RegistryTools = "^2.3.0"
+TOML = "^1.0.3"
 julia = "1.6.7"
 
 [extras]
