@@ -1,4 +1,4 @@
-# LocalRegistrator
+# LocalRegistrator.jl
 
 [![Documentation - latest](https://img.shields.io/badge/docs-stable-blue)](https://suitesplines.github.io/LocalRegistrator.jl/stable/)
 [![Documentation - dev](https://img.shields.io/badge/docs-dev-blue)](https://suitesplines.github.io/LocalRegistrator.jl/dev/)
