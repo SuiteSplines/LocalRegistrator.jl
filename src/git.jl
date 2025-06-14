@@ -7,17 +7,18 @@ It does not throw an exception if the `git` process fails.
 function istoplevel(path::String)
     !isdir(path) && return false
     path = expanduser(realpath(path))
-    buf = IOBuffer()
+    stdout = IOBuffer()
+    stderr = IOBuffer()
 
     try
-        run(pipeline(`$(git()) -C $path rev-parse --show-toplevel`, stdout=buf, stderr=buf))
+        run(pipeline(`$(git()) -C $path rev-parse --show-toplevel`, stdout=stdout, stderr=stderr))
     catch e
         if !isa(e, ProcessFailedException)
             throw(e)
         end
     end
 
-    return chomp(String(take!(buf))) == path
+    return chomp(String(take!(stdout))) == path
 end
 
 """

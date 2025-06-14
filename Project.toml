@@ -1,7 +1,7 @@
 name = "LocalRegistrator"
 uuid = "b2e007fe-26bf-4abf-a2e9-4b2a1ab78b25"
 authors = ["Michał Mika <michal@mika.sh> and contributors"]
-version = "0.2.0"
+version = "0.2.1"
 
 [deps]
 Git = "d7ba0133-e1db-5d97-8f8c-041e4b3a1eb2"
