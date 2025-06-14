@@ -1,0 +1,3 @@
+var documenterSearchIndex = {"docs":
+[{"location":"#LocalRegistrator","page":"Home","title":"LocalRegistrator","text":"","category":"section"},{"location":"","page":"Home","title":"Home","text":"Documentation for LocalRegistrator.","category":"page"},{"location":"","page":"Home","title":"Home","text":"","category":"page"},{"location":"#LocalRegistrator.istoplevel-Tuple{String}","page":"Home","title":"LocalRegistrator.istoplevel","text":"istoplevel(path::String)\n\nReturns true if a top-level repository is located at path and false otherwise. It does not throw an exception if the git process fails.\n\n\n\n\n\n","category":"method"}]
+}
