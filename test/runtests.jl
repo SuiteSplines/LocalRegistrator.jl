@@ -2,10 +2,11 @@ using Test
 using Pkg, Git, Random
 
 using LocalRegistrator
-import LocalRegistrator: istoplevel, head_commit_hash, tree_hash, withtempdir
+import LocalRegistrator: confirm, istoplevel, isdirty, head_commit_hash, tree_hash, withtempdir
 
 
 tests = [
+    "base",
     "git",
     "registering"
 ]

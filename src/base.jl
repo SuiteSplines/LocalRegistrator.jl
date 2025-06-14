@@ -7,8 +7,8 @@ function withtempdir(f::Function)
     return nothing
 end
 
-function confirm(prompt="\nDo you confirm? (y/n): ")
+function confirm(prompt="\nDo you confirm? (y/n): "; input_function::Function=readline)
     print(prompt)
-    answer = readline()
+    answer = input_function()
     return lowercase(strip(answer)) in ["y", "yes"]
 end

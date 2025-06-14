@@ -17,6 +17,42 @@
     end
 end
 
+@testset "Check if repository is dirty" begin
+    withtempdir() do tmp_dir
+        # initialize empty git repo in tmp_dir
+        run(pipeline(`$(git()) init`, stdout=devnull))
+
+        # create some file in tmp_dir
+        write(joinpath(tmp_dir, "README.md"), "# Temporary Repo")
+
+        # add README.md
+        run(pipeline(`$(git()) add README.md`, stdout=devnull))
+
+        # add a commit and capture output
+        run(pipeline(`$(git()) commit -m "add README.md"`, stdout=devnull))
+
+        # now we have HEAD ref...
+
+        # test for clean repository
+        @test isdirty(tmp_dir) == false
+
+        # create some file in tmp_dir
+        write(joinpath(tmp_dir, "README.md"), "changed")
+
+        # test for dirty repository
+        @test isdirty(tmp_dir) == true
+
+        # add README.md
+        run(pipeline(`$(git()) add README.md`, stdout=devnull))
+
+        # add a commit and capture output
+        run(pipeline(`$(git()) commit -m "modified README.md"`, stdout=devnull))
+
+        # test for clean repository
+        @test isdirty(tmp_dir) == false
+    end
+end
+
 @testset "Get last commit hashes" begin
     withtempdir() do tmp_dir
         # create some file in tmp_dir
