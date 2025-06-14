@@ -31,6 +31,10 @@ jobs:
         arch:
           - x64
     steps:
+      - name: Setup dummy Git user
+        run: |
+          git config --global user.email "bot@suitesplines.com"
+          git config --global user.name "SuiteSplines Bot"
       - uses: actions/checkout@v4
       - uses: julia-actions/setup-julia@v2
         with:
