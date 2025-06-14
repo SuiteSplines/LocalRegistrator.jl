@@ -55,7 +55,7 @@ function register(; project_url::S, registry_url::S, registry_deps::Vector{S}=["
             cd(joinpath("registries", dir)) do
                 # new commit message with required metadata
                 new_commit_message = """
-                #$(reg.metadata["kind"]): $(project["name"]) v$(project["version"])
+                $(reg.metadata["kind"]): $(project["name"]) v$(project["version"])
 
                 - UUID: $(project["uuid"])
                 - Repository: $project_url
