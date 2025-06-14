@@ -24,17 +24,17 @@ jobs:
       matrix:
         version:
           - '1.10'
-          - '1.6'
           - 'pre'
         os:
           - ubuntu-latest
         arch:
           - x64
     steps:
-      - name: Setup dummy Git user
+      - name: Set up dummy Git user
         run: |
           git config --global user.email "bot@suitesplines.com"
           git config --global user.name "SuiteSplines Bot"
+          git config --global init.defaultBranch main
       - uses: actions/checkout@v4
       - uses: julia-actions/setup-julia@v2
         with:
