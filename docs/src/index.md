@@ -31,11 +31,14 @@ Date:   Sat Jun 14 18:10:40 2025 +0200
 1. Make sure your remote repository and the default branch are up to date. This includes merging any local changes and bumping the version in `Project.toml`. Use [semantic versioning](https://semver.org/).
 
 2. Use `LocalRegistrator` to register the package. You will need the remote URL of the package in question as well as the remote URL of the target registry.
+
     ```
     register(; project_url="https://github.com/SuiteSplines/SuiteSplinesExamplePkg.jl.git", registry_url="https://github.com/SuiteSplines/SuiteSplinesRegistry.git")
     ```
 3. At the end, you will see the included commit message and be prompted to confirm pushing the new branch to the remote registry.
 
+
+## Index
 ```@index
 ```
 
